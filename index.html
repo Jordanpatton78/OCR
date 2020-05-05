@@ -88,6 +88,9 @@
                         parent.insertBefore(elem, parent.firstChild);
                         var numdiv = document.getElementById(num);
                         var msg = document.createElement('div');
+                        var text = result.text;
+                        var characters = text.split(" ");
+                        msg.InnerHTML = characters[3];
                         num += 1;
                     });
             });
