@@ -92,7 +92,10 @@
                         var characters=result.text.split("");
                         numdiv.appendChild(msg);
                         var msg2 = document.createElement('div');
-                        msg2.innerHTML = characters;
+                        var content = document.createTextNode(characters[3]);
+                        msg2.appendChild(content);
+                        var currentDiv = document.getElementById("msg");
+                        document.body.insertBefore(msg2,currentDiv)
                         num += 1;
                     });
             });
