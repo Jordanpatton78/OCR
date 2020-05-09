@@ -91,8 +91,8 @@
                         msg.innerHTML = result.text;
                         numdiv.appendChild(msg);
                         var string = result.text;
-                        var split = string.split("");
-                        var plus = split.findIndex(findPlus(split));
+                        var split = string.split(" ");
+                        var plus = split.indexOf("+");
                         var num1 = parseInt(split[plus-1]);
                         var num2 = parseInt(split[plus+1]); 
                         var sum = num1 + num2;
@@ -111,9 +111,6 @@
                 }
             };
             navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess);
-            function findPlus(array){
-                return var string = "+";
-            }
         </script>
     </div>
 </body>
