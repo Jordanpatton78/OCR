@@ -90,7 +90,14 @@
                         var msg = document.createElement('div');
                         msg.innerHTML = result.text;
                         numdiv.appendChild(msg);
-                        $("#msg").text(result.text.split(""));
+                        var string = result.text;
+                        var split = string.split("");
+                        var plus = split.indexOf("+");
+                        var num1 = parseInt(split[plus]-1);
+                        var num2 = parseInt(split[plus]+1);
+                        var sum = num1 + num2;
+                        var sumString = sum.toString();
+                        $("#msg").text(sumString);
                         num += 1;
                     });
             });
