@@ -59,6 +59,15 @@
                 ctx.putImageData(imgData, 0, 0);
                 requestAnimationFrame(draw);
             }
+            function addRecognizedNums(string){
+                var split = string.split("+");
+                var sum = 0;
+                for(var i=0; i<split.length;i++){
+                    sum+=parseInt(split[i]);
+                }
+                var sumString = sum.toString();
+                return sumString;
+            }
             var snapshotCanvas = document.getElementById('snapshot');
             var captureButtoneng = document.getElementById('captureeng');
             var snapshotButton = document.getElementById('snapshotbutton');
@@ -91,12 +100,7 @@
                         msg.innerHTML = result.text;
                         numdiv.appendChild(msg);
                         var string = result.text;
-                        var split = string.split("+");
-                        var sum = 0;
-                        for(var i=0; i<split.length;i++){
-                            sum+=parseInt(split[i]);
-                        }
-                        var sumString = sum.toString();
+                        addRecognizedNums(string);
                         $("#msg").text(sumString);
                         num += 1;
                     });
