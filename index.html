@@ -91,17 +91,11 @@
                         msg.innerHTML = result.text;
                         numdiv.appendChild(msg);
                         var string = result.text;
-                        var split = string.split("");
-                        var plus = split.indexOf("+");
-                        var num1 = parseInt(split[plus-1]);
-                        if(split[plus-2]==1||2||3||4||5||6||7||8||9){
-                            num1 = parseInt((split[plus-2]*10)+split[plus-1]);
+                        var split = string.split("+");
+                        var sum = 0;
+                        for(var i=0; i<split.length;i++){
+                            sum+=parseInt(split[i]);
                         }
-                        var num2 = parseInt(split[plus+1]);
-                        if(split[plus+2]==1||2||3||4||5||6||7||8||9){
-                            num2 = parseInt((split[plus+1]*10)+split[plus+2]);
-                        }
-                        var sum = num1 + num2;
                         var sumString = sum.toString();
                         $("#msg").text(sumString);
                         num += 1;
