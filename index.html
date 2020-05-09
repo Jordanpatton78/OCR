@@ -89,7 +89,8 @@
                         var numdiv = document.getElementById(num);
                         var msg = document.createElement('div');
                         var array = result.split(" ");
-                        msg.innerHTML = array.text;
+                        msg.innerHTML = result.text;
+                        $("#msg").text(array);
                         numdiv.appendChild(msg);
                         num += 1;
                     });
