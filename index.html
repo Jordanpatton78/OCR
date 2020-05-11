@@ -136,19 +136,11 @@
                         msg.innerHTML = result.text;
                         numdiv.appendChild(msg);
                         var string = result.text;
-                        var newString = insertSpaces(string);
-                        performOperations(newString);
                         if(string.includes("+"){
-                           var numString = operations[0];
+                           addRecognizedNums(string)
                            }
                         if(string.includes("-"){
-                           var numString = operations[1];
-                           }
-                        if(string.includes("*"){
-                           var numString = operations[2];
-                           }
-                        if(string.includes("/"){
-                           var numString = operations[3];
+                           subtractRecognizedNums(string)
                            }
                         $("#msg").text(numString);
                         num += 1;
