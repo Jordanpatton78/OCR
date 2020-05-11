@@ -109,10 +109,10 @@
                         msg.innerHTML = result.text;
                         numdiv.appendChild(msg);
                         var string = result.text;
-                        if(string.includes("+"){
+                        if(string.includes("+")){
                            addRecognizedNums(string);
                            }
-                        if(string.includes("-"){
+                        if(string.includes("-")){
                            subtractRecognizedNums(string);
                            }
                         $("#msg").text(numString);
