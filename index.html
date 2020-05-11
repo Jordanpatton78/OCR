@@ -77,33 +77,6 @@
                 var numString = diff.toString();
                 return numString;
             }
-            function insertSpaces(string){
-                var plus = string.indexOf("+");
-                var minus = string.indexOf("-");
-                var times = string.indexOf("*");
-                var division = string.indexOf("/");
-                var string = string.insert(plus-1," ").insert(plus+1," ").insert(minus-1," ").insert(minus+1," ").insert(times-1," ").insert(times+1," ").insert(division-1," ").insert(division+1," ");
-                return string;
-            }
-            function performOperations(string){
-                var split = string.split(" ");
-                var plus = string.indexOf("+");
-                var minus = string.indexOf("-");
-                var times = string.indexOf("*");
-                var division = string.indexOf("/");
-                var sum = split[plus-1] + split[plus+1];
-                var diff = split[minus-1] - split[minus+1];
-                var product = split[times-1]*split[times+1];
-                var quotient = split[division-1]/split[division+1];
-                return [sum,diff,product,quotient];
-                }
-            let operations = performOperations();
-            String.prototype.insert = function(index, string) {
-                if (index > 0)
-                    return this.substring(0, index) + string + this.substring(index, this.length);
-                else
-                    return string + this;
-                };
             var snapshotCanvas = document.getElementById('snapshot');
             var captureButtoneng = document.getElementById('captureeng');
             var snapshotButton = document.getElementById('snapshotbutton');
