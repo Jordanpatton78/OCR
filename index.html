@@ -88,7 +88,7 @@
                         if(string.includes("-"){
                             var split = string.split("-");
                             var diff = parseInt(split[0],10);
-                            for(var i=0; i<split.length;i++){
+                            for(var i=1; i<split.length;i++){
                                 diff-=parseInt(split[i],10);
                             }
                             var diffString = diff.toString();
