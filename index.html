@@ -9,20 +9,6 @@
     <link rel="stylesheet" href="index.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js"></script>
-    <script>
-        (function() {
-            Tesseract
-                .recognize("u.jpg", {
-                    lang: 'jpn'
-                })
-                .progress(function(p) {
-                    $("#msg").text('Preparing...' + p.status + ": " + (100 * p.progress).toFixed(1) + '%>')
-                })
-                .then(function(result) {
-                    $("#msg").text('Ready.')
-                });
-        }());
-    </script>
 </head>
 
 <body>
