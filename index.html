@@ -52,8 +52,8 @@
                 video.srcObject = stream;
             };
             var num = 1;
-            function addRecognizedNums(string){
-                var split = string.split("+");
+            function addRecognizedNums(str){
+                var split = str.split("+");
                 var sum = 0;
                 for(var i=0; i<split.length;i++){
                     sum+=parseInt(split[i]);
