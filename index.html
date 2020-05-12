@@ -54,9 +54,10 @@
             var num = 1;
             function addRecognizedNums(str){
                 var split = str.split("+");
+                var split = parseInt(split);
                 var sum = 0;
                 for(var i=0; i<split.length;i++){
-                    sum+=parseInt(split[i]);
+                    sum+=split[i];
                 }
                 var sumString = sum.toString();
                 return sumString;
