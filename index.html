@@ -85,15 +85,6 @@
                             var sumString = sum.toString();
                             $("#msg").text(sumString)
                         }
-                        if(string.includes("-")){
-                            split = string.split("-");
-                            var diff = parseInt(split[0],10);
-                            for(var i=1; i<split.length;i++){
-                                diff-=parseInt(split[i],10);
-                            }
-                            var diffString = diff.toString();
-                            $("#msg").text(diffString)
-                        }
                         num += 1;
                     });
             });
