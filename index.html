@@ -76,14 +76,12 @@
                         var string = result.text;
                         msg.innerHTML = string;
                         numdiv.appendChild(msg);
-                        if(string.includes("+")){
-                            var split = string.split("+");
-                            var sum = 0;
-                            for(var i=0; i<split.length;i++){
-                                sum+=parseInt(split[i],10);
-                            }
-                            var sumString = sum.toString();
+                        var split = string.split("+");
+                        var sum = 0;
+                        for(var i=0; i<split.length;i++){
+                            sum+=parseInt(split[i],10);
                         }
+                        var sumString = sum.toString();
                         $("#msg").text(sumString)
                         num += 1;
                     });
