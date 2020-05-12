@@ -79,11 +79,12 @@
                         numdiv.appendChild(msg);
                         if(string.includes("+")){
                            addRecognizedNums(string);
+                           $("#msg").text(sumString)
                         }
                         if(string.includes("-")){
                            subtractRecognizedNums(string);
+                           $("#msg").text(diffString)
                         }
-                        $("#msg").text(numString)
                         num += 1;
                     });
             });
@@ -93,8 +94,8 @@
                 for(var i=0; i<split.length;i++){
                     sum+=parseInt(split[i]);
                 }
-                var numString = sum.toString();
-                return numString;
+                var sumString = sum.toString();
+                return sumString;
             }
             function subtractRecognizedNums(string){
                 var split = string.split("-");
@@ -102,8 +103,8 @@
                 for(var i=0; i<split.length;i++){
                     diff-=parseInt(split[i]);
                 }
-                var numString = diff.toString();
-                return numString;
+                var diffString = diff.toString();
+                return diffString;
             }
             var front = false;
             var constraints = {
