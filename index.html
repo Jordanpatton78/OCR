@@ -56,19 +56,10 @@
                 var split = string.split("+");
                 var sum = 0;
                 for(var i=0; i<split.length;i++){
-                    sum+=split[i];
+                    sum+=parseInt(split[i]);
                 }
-                var sumString = sum;
+                var sumString = sum.toString();
                 return sumString;
-            }
-            function subtractRecognizedNums(string){
-                var split = string.split("-");
-                var diff = split[0];
-                for(var i=0; i<split.length;i++){
-                    diff-=split[i];
-                }
-                var diffString = diff;
-                return diffString;
             }
             captureButtoneng.addEventListener('click', function() {
                 var context = snapshot.getContext('2d');
@@ -94,14 +85,8 @@
                         var string = result.text;
                         msg.innerHTML = string;
                         numdiv.appendChild(msg);
-                        if(string.includes("+")){
-                           addRecognizedNums(string);
-                           $("#msg").text(sumString)
-                        }
-                        if(string.includes("-")){
-                           subtractRecognizedNums(string);
-                           $("#msg").text(diffString)
-                        }
+                        addRecognizedNums(string);
+                        $("#msg").text(sumString)
                         num += 1;
                     });
             });
