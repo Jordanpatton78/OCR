@@ -52,15 +52,6 @@
                 video.srcObject = stream;
             };
             var num = 1;
-            function addRecognizedNums(str){
-                var split = str.split("+");
-                var sum = 0;
-                for(var i=0; i<split.length;i++){
-                    sum+=parseInt(split[i],10);
-                }
-                var sumString = sum.toString();
-                return sumString;
-            }
             captureButtoneng.addEventListener('click', function() {
                 var context = snapshot.getContext('2d');
                 context.drawImage(video, 100, 300, 600, 200, 0, 0, snapshotCanvas.width,
@@ -85,7 +76,12 @@
                         var string = result.text;
                         msg.innerHTML = string;
                         numdiv.appendChild(msg);
-                        addRecognizedNums(string);
+                        var split = string.split("+");
+                        var sum = 0;
+                        for(var i=0; i<split.length;i++){
+                            sum+=parseInt(split[i],10);
+                        }
+                        var sumString = sum.toString();
                         $("#msg").text(sumString)
                         num += 1;
                     });
