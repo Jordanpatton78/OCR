@@ -70,7 +70,7 @@
             }
             function subtractRecognizedNums(string){
                 var split = string.split("-");
-                var diff = 0
+                var diff = parseInt(split[0]);
                 for(var i=0; i<split.length;i++){
                     diff-=parseInt(split[i]);
                 }
