@@ -92,9 +92,8 @@
                         parent.insertBefore(elem, parent.firstChild);
                         var numdiv = document.getElementById(num);
                         var msg = document.createElement('div');
-                        msg.innerHTML = result.text;
-                        numdiv.appendChild(msg);
                         var string = result.text;
+                        msg.innerHTML = result.text;
                         if(string.includes("+")){
                            addRecognizedNums(string);
                         }
@@ -102,6 +101,7 @@
                            subtractRecognizedNums(string);
                         }
                         $("#msg").text(numString)
+                        numdiv.appendChild(msg);
                         num += 1;
                     });
             });
