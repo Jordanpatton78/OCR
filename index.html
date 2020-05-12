@@ -56,18 +56,18 @@
                 var split = string.split("+");
                 var sum = 0;
                 for(var i=0; i<split.length;i++){
-                    sum+=parseInt(split[i]);
+                    sum+=split[i];
                 }
-                var sumString = sum.toString();
+                var sumString = sum;
                 return sumString;
             }
             function subtractRecognizedNums(string){
                 var split = string.split("-");
-                var diff = parseInt(split[0]);
+                var diff = split[0];
                 for(var i=0; i<split.length;i++){
-                    diff-=parseInt(split[i]);
+                    diff-=split[i];
                 }
-                var diffString = diff.toString();
+                var diffString = diff;
                 return diffString;
             }
             captureButtoneng.addEventListener('click', function() {
