@@ -76,13 +76,24 @@
                         var string = result.text;
                         msg.innerHTML = string;
                         numdiv.appendChild(msg);
-                        var split = string.split("+");
+                        var addArray = string.split("+");
                         var sum = 0;
-                        for(var i=0; i<split.length;i++){
-                            sum+=parseInt(split[i],10);
+                        for(var i=0; i<addArray.length;i++){
+                            sum+=parseInt(addArray[i],10);
                         }
                         var sumString = sum.toString();
-                        $("#msg").text(sumString)
+                        var subArray = string.split("-");
+                        var diff = subArray[0];
+                        for(var i=1;i<subArray.length;i++){
+                            diff-=parseInt(subArray[i],10);
+                        }
+                        var diffString = diff.toString();
+                        if(string.indexOf("+")!=-1){
+                            $("#msg").text(sumString)
+                        }
+                        if(string.indexOf("-")!=-1){
+                            $("#msg").text(diffString)
+                        }
                         num += 1;
                     });
             });
