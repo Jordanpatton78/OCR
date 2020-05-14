@@ -77,18 +77,15 @@
                         msg.innerHTML = string;
                         numdiv.appendChild(msg);
                         var split = string.split("");
-                        for(var i=0;i<split.length;i++){
-                            var value = split[0];
-                            var values = [];
-                            while(split[i]!="+"||"-"||"*"||"/"){
-                                value = (split[i]*10) + split[i+1];
-                            }
-                            if(split[i]=="+"||"-"||"*"||"/"){
-                                values.push(value);
-                            }
-                            return values;
+                        for(var i=0; i<split.length; i++){
+                             var array = [];
+                             If(split[i]!="+"||"-"||"*"||"/"){
+                                  continue;
+                             }
+                             else{
+                                  var operator = split.indexOf("*");
+                             }
                         }
-                        $("#msg").text(values);
                         num += 1;
                     });
             });
