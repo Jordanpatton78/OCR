@@ -79,6 +79,9 @@
                         var split = string.split("");
                         var array = [];
                         for(var i=0; i<split.length; i++){
+                            if(split[i]!="+"||"-"||"*"||"/"){
+                                continue;
+                            }
                             var index = split.indexOf("+"||"-"||"*"||"/",i);
                             array.push(index);
                         }
