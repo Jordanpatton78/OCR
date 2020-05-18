@@ -77,15 +77,12 @@
                         msg.innerHTML = string;
                         numdiv.appendChild(msg);
                         var split = string.split("");
+                        var array = [];
                         for(var i=0; i<split.length; i++){
-                             var array = [];
-                             If(split[i]!="+"||"-"||"*"||"/"){
-                                  continue;
-                             }
-                             else{
-                                  var operator = split.indexOf("+");
-                             }
+                            var index = split.indexOf("+"||"-"||"*"||"/",i);
+                            array.push(index);
                         }
+                        $("#msg").text(array);
                         num += 1;
                     });
             });
