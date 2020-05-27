@@ -82,7 +82,7 @@
                             if(split[i]!="+"||"-"||"*"||"/"){
                                 continue;
                             }
-                            var index = split.indexOf("+"||"-"||"*"||"/",i);
+                            var index = split.indexOf("+",i);
                             array.push(index);
                         }
                         $("#msg").text(array);
