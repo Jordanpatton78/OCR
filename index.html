@@ -94,6 +94,17 @@
                         if(string.indexOf("-")!=-1){
                             $("#msg").text(diffString)
                         }
+                        if(string.indexOf("+"||"-")!=-1){
+                            for(var i=0;i<addArray.length;i++){
+                                if(addArray[i].indexOf("-")!=-1){
+                                    var splitAddArray = addArray[i].split("-");
+                                    var value = splitAddArray[0];
+                                    for(var i=1;i<splitAddArray.length;i++){
+                                        value-=parseInt(splitAddArray[i],10);
+                                    }
+                                }
+                            }
+                        }
                         num += 1;
                     });
             });
