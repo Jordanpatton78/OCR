@@ -20,7 +20,7 @@
             <button id="captureeng">Capture</button>
         </div>
         <div id="msg" align="center"></div>
-        <canvas id="snapshot" width="300" height="100"></canvas>
+        <canvas id="snapshot" width="400" height="450"></canvas>
         <br>
         <script>
             var video = document.getElementById("player"),
@@ -47,7 +47,7 @@
             var num = 1;
             captureButtoneng.addEventListener('click', function() {
                 var context = snapshot.getContext('2d');
-                context.drawImage(video, 100, 300, 600, 200, 0, 0, snapshotCanvas.width,
+                context.drawImage(video, 100, 300, 600, 600, 0, 0, snapshotCanvas.width,
                     snapshotCanvas.height);
                 const url = snapshot.toDataURL("image/png");
                 Tesseract
