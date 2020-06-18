@@ -30,9 +30,9 @@
     
             function draw() {
                 canvas.width = 400;
-                canvas.height = 500;
+                canvas.height = 450;
                 ctx.drawImage(video, 100, 300, 600, 200,
-                    0, 0, 300, 100);
+                    0, 0, 400, 450);
                 imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
                 data = imgData.data;
                 for (let i = 0; i < data.length; i += 4) {
