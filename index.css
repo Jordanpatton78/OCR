@@ -22,3 +22,6 @@ background-color: #248;
 color: #fff;
 border-style: none;
 }
+resizable{
+border-style: solid;
+}
