@@ -22,7 +22,7 @@ background-color: #248;
 color: #fff;
 border-style: none;
 }
-resizable{
+.resizable{
 border-style: solid;
 width: 100px;
 height: 100px;
