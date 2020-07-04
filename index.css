@@ -27,7 +27,7 @@ border-style: solid;
 border: 3px solid #4286f4;
 width: 100px;
 height: 100px;
-position: static;
+position: fixed;
 top: 100px;
 left: 100px;
 z-index: 300000;
