@@ -24,6 +24,7 @@ border-style: none;
 }
 .resizable{
 border-style: solid;
+border: 3px solid #4286f4;
 width: 100px;
 height: 100px;
 position: fixed;
